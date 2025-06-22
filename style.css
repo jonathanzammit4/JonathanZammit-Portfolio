@@ -1,72 +1,81 @@
+/* General Page Styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #f7f9fc; /* Soft, clean background */
   color: #333;
+  font-size: 18px; /* Larger, readable font */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+main, section {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Header */
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #0077b6; /* Professional blue tone */
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 nav {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 nav a {
-  color: #fff;
-  margin-right: 15px;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: #dcefff;
 }
 
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+/* Section Headings */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Footer */
 footer {
-  background-color: #f1f1f1;
+  background-color: #0077b6; /* Same as header */
+  color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 1.5rem 0;
+  margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
-.footer-content {
-  color: #333;
-  font-size: 0.95rem;
+.footer-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-footer a {
-  color: inherit;          /* Inherit the text color */
-  text-decoration: none;   /* Remove underline */
-  font-weight: normal;
-}
-
-footer a:hover {
+.footer-content a:hover {
   text-decoration: underline;
 }
-
