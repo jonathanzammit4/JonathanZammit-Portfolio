@@ -46,8 +46,27 @@ section {
 }
 
 footer {
+  background-color: #f1f1f1;
   text-align: center;
   padding: 1rem;
-  background: #eee;
   margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
+
+.footer-content {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: inherit;          /* Inherit the text color */
+  text-decoration: none;   /* Remove underline */
+  font-weight: normal;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
