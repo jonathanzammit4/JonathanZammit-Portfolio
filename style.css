@@ -25,18 +25,59 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
 nav a {
-  margin: 0 1rem;
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  border: none;
-  outline: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #a5d8ff;
+  text-decoration: underline;
+  color: #dcefff;
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: white;
+  color: #0077b6;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    margin: 1rem auto 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
 }
 
 section {
@@ -141,12 +182,6 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
   .card-header {
     flex-direction: column;
     align-items: flex-start;
