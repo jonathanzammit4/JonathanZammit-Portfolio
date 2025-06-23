@@ -58,11 +58,36 @@ nav a:hover {
   color: #dcefff;
 }
 
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav.active {
+    display: flex;
+  }
+}
+
+
 /* Section Headings */
 section {
   margin-top: 2rem;
   padding: 0;
   text-align: left;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+  background-color: #e2edff;
+  transform: scale(1.01);
 }
 
 section h2 {
