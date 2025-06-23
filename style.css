@@ -1,32 +1,41 @@
-/* General Page Styles */
+/* ------------------------------
+   Global Styles
+------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
   background-color: #f7f9fc;
   color: #333;
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
+/* Container for main content */
 main, section {
   flex: 1;
-  padding: 0;
   max-width: 900px;
-  margin: 0 auto; /* centers horizontally */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: left;
 }
 
-
-/* Header */
+/* ------------------------------
+   Header & Navigation
+------------------------------ */
 header {
   background-color: #0077b6;
   color: white;
-  padding: 0rem 0 1rem; /* enough padding for all screens */
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 header h1 {
@@ -34,21 +43,18 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
+/* Navigation Bar */
 nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   margin-top: 0.5rem;
 }
-
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -58,30 +64,49 @@ nav a:hover {
   color: #dcefff;
 }
 
-/* Responsive nav */
+/* Mobile Menu Toggle Button */
+.nav-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Responsive Nav */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
   }
+
   nav {
     display: none;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    background-color: #0077b6;
+    padding: 1rem 0;
+    width: 100%;
   }
+
   nav.active {
     display: flex;
   }
 }
 
+/* ------------------------------
+   Sections
+------------------------------ */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-/* Section Headings */
 section {
-  margin-top: 2rem;
-  padding: 0;
-  text-align: left;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -90,23 +115,23 @@ section:hover {
   transform: scale(1.01);
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-section p, section ul {
-  margin-left: 0;
+section p,
+section ul {
   padding-left: 0;
+  margin-left: 0;
 }
 
-/* Lists */
+/* ------------------------------
+   Lists
+------------------------------ */
 ul {
   padding-left: 1.2rem;
   line-height: 1.8;
 }
 
-/* CV button */
+/* ------------------------------
+   CV Button
+------------------------------ */
 .cv-button {
   display: inline-block;
   padding: 0.5rem 1.2rem;
@@ -122,15 +147,16 @@ ul {
   background-color: #023e8a;
 }
 
-
-/* Footer */
+/* ------------------------------
+   Footer
+------------------------------ */
 footer {
-  background-color: #0077b6; /* Same as header */
+  background-color: #0077b6;
   color: white;
   text-align: center;
   padding: 1.5rem 0;
   margin-top: auto;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content a {
