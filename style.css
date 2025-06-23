@@ -31,6 +31,8 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  border: none;
+  outline: none;
 }
 
 nav a:hover {
@@ -74,6 +76,7 @@ li {
 
 .experience-card:hover {
   background-color: #e6f0ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -130,6 +133,11 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Remove hover box effect */
+a {
+  outline: none;
 }
 
 /* Responsive */
