@@ -106,6 +106,23 @@ ul {
   line-height: 1.8;
 }
 
+/* CV button */
+.cv-button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #023e8a;
+}
+
+
 /* Footer */
 footer {
   background-color: #0077b6; /* Same as header */
