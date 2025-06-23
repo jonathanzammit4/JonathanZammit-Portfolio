@@ -48,14 +48,15 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
@@ -64,38 +65,39 @@ nav a:hover {
   color: #dcefff;
 }
 
-/* Mobile Menu Toggle Button */
+/* Mobile nav toggle */
 .nav-toggle {
   display: none;
-  background: none;
+  background: white;
+  color: #0077b6;
   font-size: 1.5rem;
-  color: white;
   border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
   cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  margin-top: 1rem;
 }
 
-/* Responsive Nav */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
+    margin: 1rem auto 0;
   }
 
   nav {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #0077b6;
-    padding: 1rem 0;
-    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   nav.active {
     display: flex;
   }
 }
+
 
 /* ------------------------------
    Sections
