@@ -156,6 +156,10 @@ li {
   transition: max-height 0.3s ease;
 }
 
+.experience-card.expanded .card-details {
+  max-height: 500px; 
+}
+
 .cv-button {
   background-color: #1e3a8a;
   color: white;
@@ -206,6 +210,7 @@ section {
     align-items: flex-start;
   }
 }
+
 
 
 
