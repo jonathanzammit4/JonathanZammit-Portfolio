@@ -113,8 +113,6 @@ li {
   transition: all 0.4s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: left;
-  height: auto;
-  overflow: visible;
 }
 
 .experience-card:hover {
@@ -140,8 +138,9 @@ li {
 }
 
 .experience-card.expanded .card-details {
-  max-height: 200px;
   margin-top: 0.5rem;
+  height: auto;
+  overflow: visible;
 }
 
 .cv-button {
@@ -194,5 +193,6 @@ section {
     align-items: flex-start;
   }
 }
+
 
 
