@@ -120,6 +120,12 @@ li {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.experience-card.expanded {
+  margin-top: 0.5rem;
+  height: auto;
+  overflow: visible;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -135,12 +141,6 @@ li {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-}
-
-.experience-card.expanded .card-details {
-  margin-top: 0.5rem;
-  height: auto;
-  overflow: visible;
 }
 
 .cv-button {
@@ -193,6 +193,7 @@ section {
     align-items: flex-start;
   }
 }
+
 
 
 
