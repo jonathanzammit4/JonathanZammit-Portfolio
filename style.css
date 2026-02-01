@@ -40,7 +40,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* LEFT SIDE GROUP */
@@ -52,7 +51,7 @@ header {
 
 /* NAME (white + bigger font) */
 .nav-left a {
-  font-size: 2.2rem; /* ← bigger name */
+  font-size: 2rem; /* ← bigger name */
   font-weight: 800;
   color: white;
   text-decoration: none;
@@ -82,7 +81,7 @@ header {
   font-weight: 500;
 }
 
-/* Underline on hover — like the screenshot */
+/* Underline on hover */
 #main-nav a:hover {
   text-decoration: underline;
 }
@@ -222,6 +221,7 @@ footer a:hover {
   text-decoration: underline;
 }
 ``
+
 
 
 
