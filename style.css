@@ -28,7 +28,7 @@ ul { padding: 0; list-style: none; }
 li { margin-bottom: 0.5rem; }
 
 /* =========================================
-   HEADER + NAVIGATION
+   HEADER 
 ========================================= */
 
 /* =========================================
@@ -47,63 +47,73 @@ header {
   z-index: 1000;
 }
 
-/* Left side */
+/* LEFT SIDE GROUP */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
+/* NAME (white + bigger font) */
 .nav-left a {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2.2rem; /* ← bigger name */
+  font-weight: 800;
   color: white;
   text-decoration: none;
 }
 
-/* Vertical bar */
+/* Name hover underline */
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+/* Vertical Line */
 .header-divider {
   width: 1px;
-  height: 30px;
+  height: 32px;
   background-color: rgba(255,255,255,0.6);
 }
 
 /* Small label */
 .nav-language {
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Right-side navigation */
+/* RIGHT SIDE NAVIGATION */
 #main-nav {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 #main-nav a {
-  color: white;
+  color: white;              /* ← Fix black text issue */
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
+/* Underline on hover — like the screenshot */
 #main-nav a:hover {
   text-decoration: underline;
 }
 
-/* Mobile menu button */
+/* MOBILE MENU BUTTON */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* Mobile behaviour */
+/* MOBILE BEHAVIOR */
 @media (max-width: 768px) {
+
   .nav-toggle {
     display: block;
+    margin-left: auto;
   }
 
   #main-nav {
@@ -223,4 +233,5 @@ footer a:hover {
   text-decoration: underline;
 }
 ``
+
 
