@@ -1,6 +1,7 @@
-/* style.css */
+/* =========================================
+   GLOBAL
+========================================= */
 
-/* Global styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,82 +10,12 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2.5rem;
-}
-
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: #dcefff;
-}
-
-/* Mobile nav toggle */
-.nav-toggle {
-  display: none;
-  background: white;
-  color: #0077b6;
-  font-size: 1.5rem;
-  border: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-    margin: 1rem auto 0;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  nav.active {
-    display: flex;
-  }
-}
-
 section {
   padding: 3rem 1rem;
   max-width: 800px;
   margin: auto;
   text-align: center;
+  scroll-margin-top: 120px; /* header offset */
 }
 
 h2 {
@@ -93,16 +24,92 @@ h2 {
   color: #1e3a8a;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+ul { padding: 0; list-style: none; }
+li { margin-bottom: 0.5rem; }
+
+/* =========================================
+   HEADER + NAVIGATION
+========================================= */
+
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: flex;
+  justify-content: space-between; /* Name left, menu right */
+  align-items: center;
 }
 
-li {
-  margin-bottom: 0.5rem;
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-/* Experience Cards */
+/* NAV links (desktop) */
+#main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+#main-nav a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#main-nav a:hover {
+  text-decoration: underline;
+  color: #dcefff;
+}
+
+/* Mobile hamburger */
+.nav-toggle {
+  display: none;
+  background: white;
+  color: #1e3a8a;
+  font-size: 1.6rem;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* =========================================
+   RESPONSIVE NAVIGATION
+========================================= */
+
+@media (max-width: 768px) {
+  .nav-toggle { 
+    display: block; 
+    margin-left: auto;
+  }
+
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #1e3a8a;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+  }
+
+  #main-nav.active {
+    display: flex;
+  }
+}
+
+/* =========================================
+   EXPERIENCE CARDS
+========================================= */
+
 .experience-card {
   background-color: white;
   border: 2px solid #1e3a8a;
@@ -111,34 +118,16 @@ li {
   padding: 1rem;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: left;
-  display: block;
 }
 
 .experience-card:hover {
   background-color: #e6f0ff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.experience-card.expanded {
-  margin-top: 0.5rem;
-  height: auto;
-  overflow: visible;
-}
-
-.experience-card ul {
-  margin: 0.5rem 0 0 1.2rem;  /* top margin + left indent */
-  padding: 0;
-  list-style: disc;           /* ensure bullets are visible */
-}
-
-.experience-card li {
-  margin-bottom: 0.3rem;
-  line-height: 1.4;
-}
-``
-
+/* Card header */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -150,6 +139,7 @@ li {
   color: #1e3a8a;
 }
 
+/* Collapsible details */
 .card-details {
   max-height: 0;
   overflow: hidden;
@@ -157,8 +147,32 @@ li {
 }
 
 .experience-card.expanded .card-details {
-  max-height: 500px; 
+  max-height: 600px; /* enough for long content */
 }
+
+/* Bullet points inside cards */
+.experience-card ul {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.experience-card li {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+/* Fix for small screens card header */
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   BUTTONS & FOOTER
+========================================= */
 
 .cv-button {
   background-color: #1e3a8a;
@@ -193,27 +207,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-/* Remove hover box effect */
-a {
-  outline: none;
-}
-
-section {
-  scroll-margin-top: 120px; /* adjust to header height */
-}
-
-
-/* Responsive */
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-
-
-
-
-
-
+``
