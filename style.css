@@ -12,7 +12,7 @@ body {
 
 section {
   padding: 3rem 1rem;
-  max-width: 100px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
 }
@@ -75,6 +75,13 @@ header {
 /* Underline on hover */
 #main-nav a:hover {
   text-decoration: underline;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
 }
 
 /* MOBILE MENU BUTTON */
@@ -211,6 +218,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
 
 
