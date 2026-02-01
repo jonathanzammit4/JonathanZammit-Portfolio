@@ -48,14 +48,6 @@ header {
   gap: 1.5rem;
 }
 
-/* NAME (white + bigger font) */
-.nav-left a {
-  font-size: 2rem; /* ← bigger name */
-  font-weight: 800;
-  color: white;
-  text-decoration: none;
-}
-
 /* Name hover underline */
 .nav-left a:hover {
   text-decoration: underline;
@@ -219,7 +211,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-``
+
 
 
 
