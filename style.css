@@ -31,74 +31,89 @@ li { margin-bottom: 0.5rem; }
    HEADER + NAVIGATION
 ========================================= */
 
+/* =========================================
+   HEADER (matching reference screenshot)
+========================================= */
+
 header {
   background-color: #1e3a8a;
-  color: white;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255,255,255,0.25);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
-  display: flex;
-  justify-content: space-between; /* Name left, menu right */
-  align-items: center;
 }
 
-header a {
+/* Left side */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-left a {
+  font-size: 1.6rem;
+  font-weight: 700;
   color: white;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 2rem;
 }
 
-/* NAV links (desktop) */
+/* Vertical bar */
+.header-divider {
+  width: 1px;
+  height: 30px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+/* Small label */
+.nav-language {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Right-side navigation */
 #main-nav {
   display: flex;
   gap: 2rem;
 }
 
 #main-nav a {
-  font-size: 1rem;
+  color: white;
+  text-decoration: none;
   font-weight: 500;
 }
 
 #main-nav a:hover {
   text-decoration: underline;
-  color: #dcefff;
 }
 
-/* Mobile hamburger */
+/* Mobile menu button */
 .nav-toggle {
   display: none;
-  background: white;
-  color: #1e3a8a;
-  font-size: 1.6rem;
+  background: none;
   border: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
+  color: white;
+  font-size: 1.7rem;
   cursor: pointer;
 }
 
-/* =========================================
-   RESPONSIVE NAVIGATION
-========================================= */
-
+/* Mobile behaviour */
 @media (max-width: 768px) {
-  .nav-toggle { 
-    display: block; 
-    margin-left: auto;
+  .nav-toggle {
+    display: block;
   }
 
   #main-nav {
     display: none;
     flex-direction: column;
     background-color: #1e3a8a;
+    padding: 1rem;
     width: 100%;
-    padding: 1rem 0;
     margin-top: 1rem;
     border-radius: 8px;
-    gap: 1rem;
   }
 
   #main-nav.active {
@@ -208,3 +223,4 @@ footer a:hover {
   text-decoration: underline;
 }
 ``
+
