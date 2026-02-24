@@ -1,187 +1,494 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jonathan Zammit - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jonathan Zammit — Business & Technology</title>
+  <meta name="description" content="Jonathan Zammit — ICT professional and BSc Business & IT graduate passionate about Blockchain, AI, and digital innovation in Malta."/>
+  <meta property="og:title" content="Jonathan Zammit — Business & Technology"/>
+  <meta property="og:description" content="ICT Administrator at MDIA. BSc Business & IT, University of Malta. Blockchain & AI enthusiast."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <header>
-  <div class="nav-left">    
-    <a href="#" class="logo"> Jonathan Zammit</a>
+<!-- SCROLL PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">JZ<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
   </div>
+</nav>
 
-  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
 
-  <nav id="main-nav">
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills & Hobbies</a>
-      <a href="#cv">Curriculum Vitae</a>
-  </nav>
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow2"></div>
+  <div class="hero-eyebrow">ICT Administrator · Malta Digital Innovation Authority</div>
+  <h1>
+    Jonathan<br>
+    <span class="line2">Zammit</span>
+  </h1>
+  <p class="hero-subtitle">
+    BSc Business &amp; IT graduate passionate about Blockchain, AI,
+    and how digital innovation reshapes modern organisations.
+  </p>
+  <div class="hero-tags">
+    <span class="tag">Blockchain</span>
+    <span class="tag">Artificial Intelligence</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">ICT Management</span>
+    <span class="tag">Data Analysis</span>
+  </div>
+  <div class="hero-actions">
+    <a href="Jonathan_Zammit_CV.pdf" download class="btn-primary">↓ Download CV</a>
+    <a href="#contact" class="btn-secondary">Get in touch →</a>
+  </div>
+  <div class="hero-scroll">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-</header>
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Business meets technology.</h2>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Hello! I'm Jonathan Zammit, I am 22 years old and I recently completed my Bachelor of Science (Honours) in Business and IT at the University of Malta. 
-      I’m passionate about how digital innovation, emerging technologies like Blockchain and AI, and data can solve real business challenges.</p>
+    <div class="about-grid">
 
-     <p>Currently, I work at the Malta Digital Innovation Authority (MDIA) and I am actively expanding my professional experience, while continuing to learn through certifications and exploring opportunities for a future Master’s degree. 
-I thrive in environments where I can apply my skills, contribute to impactful projects, and grow as a professional.</p>
-     <br> </br>
-  </section>
-
-  <section id="experience" data-aos="fade-up">
-    <h2>Experience</h2>
-
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-    <div class="card-header">
-    <h3>Malta Digital Innovation Authority </h3>
-        <p>Oct 2025 - Current</p>
+      <!-- Photo column -->
+      <div class="about-photo-col">
+        <div class="about-photo-frame">
+          <img
+            src="profile.png"
+            alt="Jonathan Zammit — professional portrait"
+            width="320"
+            height="427"
+            loading="lazy"
+          />
+          <div class="about-photo-badge">📍 Malta</div>
+        </div>
       </div>
-      <div class="card-details">
-        <ul>
-            <li> Provide technical support and troubleshooting to end users, ensuring timely resolution of ICT-related issues and maintaining smooth daily operations.</li>
-            <li> Administer and maintain the Authority's ICT infrastructure, including system configuration, updates, and performance monitoring. </li>
-            <li>Manage and track IT equipment and laptop inventory, ensuring accurate records and efficient asset allocation across the organisation. </li>
-            <li>Collaborate with MITA and external service providers on system maintenance, software deployment, and network optimisation. </li>
-            <li> Maintain and update user accounts, ensuring proper access controls and adherence to IT security policies.</li>
-            <li>Participate in IT risk management and governance activities, contributing to continuous improvement of internal processes and policies.</li>
-            <li> Support ICT projects and assist in implementing new solutions to enhance operational efficiency and technology alignment.</li>
+
+      <!-- Text column -->
+      <div class="about-text-col">
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">Years of internship &amp; work experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Government &amp; public sector roles</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">BSc</div>
+            <div class="stat-label">Business &amp; IT, University of Malta</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Languages spoken fluently</div>
+          </div>
+        </div>
+
+        <p>
+          I'm a 22-year-old Business &amp; IT professional based in Malta, currently working as
+          <strong>ICT Administrator at the Malta Digital Innovation Authority (MDIA)</strong> —
+          the national body that certifies and regulates innovative technology in Malta.
+        </p>
+        <p>
+          I recently completed my <strong>BSc (Honours) in Business and IT</strong> at the University
+          of Malta, where my research explored how financial institutions in Malta are navigating
+          Blockchain adoption. I'm fascinated by the intersection of regulation, technology, and
+          real-world impact.
+        </p>
+        <p>
+          I'm actively pursuing certifications and exploring a
+          <strong>Master's degree</strong> to deepen both my technical and analytical foundations.
+          Languages: <strong>English</strong> &amp; <strong>Maltese</strong>.
+        </p>
+
+        <div class="about-interests">
+          <h4>Research Interests</h4>
+          <div class="interest-chips">
+            <span class="chip">Blockchain &amp; DLT</span>
+            <span class="chip">AI &amp; Automation</span>
+            <span class="chip">FinTech</span>
+            <span class="chip">Digital Governance</span>
+            <span class="chip">Data Analytics</span>
+            <span class="chip">IT Security</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
+
+<!-- ══════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════ -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-label">Work History</div>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">Malta Digital Innovation Authority</div>
+            <div class="tl-role">ICT Administrator</div>
+          </div>
+          <span class="tl-date tl-current">Oct 2025 — Present</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Administer and maintain the Authority's ICT infrastructure: system configuration, updates, and performance monitoring.</li>
+          <li>Provide first-line technical support and troubleshooting, ensuring timely resolution of ICT issues.</li>
+          <li>Manage IT equipment and laptop inventory, ensuring accurate asset allocation across the organisation.</li>
+          <li>Collaborate with MITA and external providers on software deployment and network optimisation.</li>
+          <li>Participate in IT risk management and governance, contributing to continuous process improvement.</li>
         </ul>
       </div>
-    </div>
-    
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <h3>GARD Group</h3>
-        <p>July 2025 - Oct 2025</p>
-      </div>
-      <div class="card-details">
-        <ul>
-          <li>Oversaw bar and food service operations in a fast-paced environment, ensuring smooth coordination and timely customer service.</li>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">GARD Group — Jolly Jump</div>
+            <div class="tl-role">Operations Assistant</div>
+          </div>
+          <span class="tl-date">Jul 2025 — Oct 2025</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Managed bar and food service operations, supplier communication, inventory, and daily venue upkeep.</li>
+          <li>Supported management with staff supervision and issue resolution in a fast-paced environment.</li>
         </ul>
       </div>
-    </div>
-    
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <h3>Malta Business Registry</h3>
-        <p>March 2024 - May 2025</p>
-      </div>
-      <div class="card-details">
-        <ul>
-          <li>Student intern assisting with IT asset management and data reporting.</li>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">Malta Business Registry</div>
+            <div class="tl-role">Student Intern — IT &amp; Data</div>
+          </div>
+          <span class="tl-date">Mar 2024 — May 2025</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Maintained the IT Asset Management system, ensuring accurate records and policy compliance.</li>
+          <li>Contributed to a Power BI business intelligence project: data preparation, dashboard creation, and KPI visualisation.</li>
+          <li>Provided first-level technical support; performed User Acceptance Testing on new systems.</li>
+          <li>Assisted with audio-visual management for the Link Conference Hall.</li>
         </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">Ministry for Heritage, Arts &amp; Local Government</div>
+            <div class="tl-role">Student Intern — Digital &amp; Data</div>
+          </div>
+          <span class="tl-date">Oct 2023 — Mar 2024</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Maintained local council websites via WordPress, ensuring accurate public-facing information.</li>
+          <li>Developed data visualisation solutions with Power BI and helped build performance dashboards.</li>
+          <li>Provided customer support, addressing inquiries and resolving issues promptly.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">PwC Malta</div>
+            <div class="tl-role">Summer Student Intern — Audit</div>
+          </div>
+          <span class="tl-date">Jul 2023 — Oct 2023</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Assisted audit teams with client documentation and analysis to identify improvement opportunities.</li>
+          <li>Converted corporate procedures into structured internal reference materials aligned with client expectations.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">Food Chain Limited — Burger King MIA</div>
+            <div class="tl-role">Staff Member</div>
+          </div>
+          <span class="tl-date">Jul 2021 — Jan 2023</span>
+        </div>
+        <ul class="tl-bullets">
+          <li>Delivered customer service in a high-volume environment with a focus on accuracy and teamwork.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
+
+<!-- ══════════════════════════════════════
+     EDUCATION
+══════════════════════════════════════ -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">BSc (Honours) in Business &amp; IT</div>
+          <div class="edu-school">University of Malta</div>
+        </div>
+        <div class="edu-year">Sep 2022 — Jun 2025</div>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">A-Levels &amp; Intermediates</div>
+          <div class="edu-school">Junior College, Malta</div>
+        </div>
+        <div class="edu-year">Oct 2020 — May 2022</div>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">O-Levels</div>
+          <div class="edu-school">Saint Elias College</div>
+        </div>
+        <div class="edu-year">Sep 2015 — Apr 2020</div>
       </div>
     </div>
 
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <h3>Ministry of Heritage, Arts and Local Government</h3>
-        <p>Oct 2023 - Mar 2024</p>
-      </div>
-      <div class="card-details">
-        <ul>
-          <li>Student intern contributing to user support and systems testing.</li>
-        </ul>
-      </div>
+    <div class="dissertation-block">
+      <h4>Final Year Dissertation</h4>
+      <p>"Optimising Blockchain Adoption in Malta's Financial Sector: Drivers and Inhibitors"</p>
     </div>
 
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <h3>PwC</h3>
-        <p>Jul 2023 - Oct 2023</p>
+  </div>
+</section>
+
+<div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
+
+<!-- ══════════════════════════════════════
+     SKILLS
+══════════════════════════════════════ -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Skills &amp; Interests</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-icon">⚙️</div>
+        <div class="skill-group-title">Technical Skills</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Power BI</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">HTML &amp; CSS</span>
+          <span class="skill-pill">WordPress</span>
+          <span class="skill-pill">Linux</span>
+          <span class="skill-pill">R (basics)</span>
+          <span class="skill-pill">IT Asset Management</span>
+          <span class="skill-pill">ICT Infrastructure</span>
+        </div>
       </div>
-      <div class="card-details">
-        <ul>
-          <li>Summer intern in the audit department, assisting with client documentation.</li>
-        </ul>
+      <div class="skill-group">
+        <div class="skill-group-icon">🛠️</div>
+        <div class="skill-group-title">Tools &amp; Platforms</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Google Workspace</span>
+          <span class="skill-pill">Microsoft 365</span>
+          <span class="skill-pill">Microsoft Office</span>
+          <span class="skill-pill">User Acceptance Testing</span>
+          <span class="skill-pill">System Configuration</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-icon">🤝</div>
+        <div class="skill-group-title">Soft Skills</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Problem-Solving</span>
+          <span class="skill-pill">Communication</span>
+          <span class="skill-pill">Time Management</span>
+          <span class="skill-pill">Adaptability</span>
+          <span class="skill-pill">Teamwork</span>
+          <span class="skill-pill">Research &amp; Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-icon">⚽</div>
+        <div class="skill-group-title">Outside Work</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Football (Tarxien Rainbows, 5 yrs)</span>
+          <span class="skill-pill">Gym &amp; Jogging</span>
+          <span class="skill-pill">Non-fiction Reading</span>
+          <span class="skill-pill">Technology Research</span>
+          <span class="skill-pill">Art Collaboration</span>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="experience-card" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <h3>Burger King MIA</h3>
-        <p>Jul 2021 - Jan 2023</p>
+<div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's connect.</h2>
+
+    <div class="contact-wrapper">
+      <div class="contact-text">
+        <p>
+          I'm always open to interesting conversations — whether it's about
+          technology, research, career opportunities, or just a good chat.
+          Feel free to reach out through any of the channels below.
+        </p>
+        <a href="Jonathan_Zammit_CV.pdf" download class="btn-primary" style="display:inline-flex;width:fit-content;margin-top:1.5rem;">
+          ↓ Download CV (PDF)
+        </a>
       </div>
-      <div class="card-details">
-        <ul>
-          <li>Staff member responsible for customer service and operations support.</li>
-        </ul>
+      <div class="contact-links">
+        <a href="mailto:jonathanzammit04@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉️</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">jonathanzammit04@gmail.com</div>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">💼</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">jonathan-zammit-a7080b1a9</div>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://github.com/jonathanzammit" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">🐙</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">GitHub</div>
+            <div class="contact-link-value">github.com/jonathanzammit</div>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-    <section id="education" data-aos="fade-up">
-    <h2>Education</h2>
-          <ul style="list-style-type:none;">
-      <li><strong>Bachelor of Science (Honours) in Business & IT</strong> – University of Malta (2022 – 2025)</li>
-      <li><strong>Projects:</strong> Final Year Dissertation, with the title of "Optimising Blockchain Adoption in Malta's Financial Sector:
-Drivers and Inhibitors" </li>
-    </ul>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills & Hobbies</h2>
-    <ul  style="list-style-type:none;">
-      <li><strong>Technical Skills:</strong> HTML, CSS, Power BI, SQL, Linux</li>
-      <li><strong>Soft Skills:</strong> Problem-solving, Communication, Time Management, Adaptability</li>
-      <li><strong>Hobbies:</strong> Sports, Football, Exercise, Swimming</li>
-    </ul>
-  </section>
-  
-    <section id="cv" data-aos="fade-up">
-    <h2>Download My CV</h2>
-    <a href="Jonathan Zammit CV.pdf" download class="cv-button">Download CV (PDF)</a>
-  </section>
-  
+<!-- FOOTER -->
 <footer>
-  <div class="footer-content">
-    <p>
-      <a href="mailto:jonathanzammit04@email.com">Email</a> |
-      <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/">LinkedIn</a>
-    </p>
-    <p>© 2026 Jonathan Zammit</p>
+  <p>© 2026 Jonathan Zammit. Built with care.</p>
+  <div class="footer-links">
+    <a href="mailto:jonathanzammit04@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/" target="_blank">LinkedIn</a>
+    <a href="Jonathan_Zammit_CV.pdf" download>CV</a>
   </div>
 </footer>
 
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
 <script>
-  function toggleNav() {
-    document.getElementById('main-nav').classList.toggle('active');
+  // ── Scroll progress bar + nav background
+  const navbar = document.getElementById('navbar');
+  const progressBar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = pct + '%';
+  });
+
+  // ── Mobile menu toggle
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.body.style.overflow =
+      document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
   }
-</script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ── Scroll-triggered reveals with stagger
+  const revealEls = document.querySelectorAll('.tl-item, .edu-card, .skill-group');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  // Stagger items within each group
+  document.querySelectorAll('.skills-grid, .timeline, .edu-grid').forEach(group => {
+    const children = group.querySelectorAll('.tl-item, .edu-card, .skill-group');
+    const groupObs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        children.forEach((child, i) => {
+          setTimeout(() => child.classList.add('visible'), i * 110);
+        });
+        groupObs.unobserve(group);
+      }
+    }, { threshold: 0.05 });
+    groupObs.observe(group);
+  });
+
+  // Also observe any items outside groups
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Active nav link highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+    });
+  });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
