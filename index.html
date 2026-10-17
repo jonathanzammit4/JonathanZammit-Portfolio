@@ -4,12 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jonathan Zammit — Business & Technology</title>
-  <meta name="description" content="Jonathan Zammit — ICT professional and BSc Business & IT graduate passionate about Blockchain, AI, and digital innovation in Malta."/>
+  <meta name="description" content="Jonathan Zammit — ICT professional and MSc AI student passionate about Blockchain, AI, and digital innovation in Malta."/>
   <meta property="og:title" content="Jonathan Zammit — Business & Technology"/>
-  <meta property="og:description" content="ICT Administrator at MDIA. BSc Business & IT, University of Malta. Blockchain & AI enthusiast."/>
+  <meta property="og:description" content="ICT Administrator at MDIA. MSc Artificial Intelligence, University of Malta. Blockchain & AI enthusiast."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ── FAVICON: JZ monogram ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+    %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E
+      %3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E
+      %3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle'
+        font-family='system-ui,sans-serif' font-weight='800' font-size='26'
+        fill='white' letter-spacing='-1'%3EJZ%3C/text%3E
+    %3C/svg%3E">
 </head>
 <body>
 
@@ -25,13 +34,13 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
     <!-- Pill theme toggle -->
     <div class="theme-pill" id="themePill" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle light/dark mode">
       <div class="theme-pill-track">
         <span class="pill-icon pill-sun" aria-hidden="true">
-          <!-- Sun SVG -->
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="4"/>
             <line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
@@ -41,7 +50,6 @@
           </svg>
         </span>
         <span class="pill-icon pill-moon" aria-hidden="true">
-          <!-- Moon SVG -->
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
@@ -61,8 +69,8 @@
   <a href="#experience" onclick="closeMenu()">Experience</a>
   <a href="#education" onclick="closeMenu()">Education</a>
   <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <!-- Mobile pill toggle -->
   <div class="theme-pill" onclick="toggleTheme(); closeMenu();" role="button" tabindex="0" aria-label="Toggle light/dark mode">
     <div class="theme-pill-track">
       <span class="pill-icon pill-sun" aria-hidden="true">
@@ -96,7 +104,7 @@
     Zammit
   </h1>
   <p class="hero-subtitle">
-    MSc in Artificial Intelligence student passionate about Blockchain, AI,
+    MSc Artificial Intelligence student passionate about Blockchain, AI,
     and how digital innovation reshapes modern organisations.
   </p>
   <div class="hero-tags">
@@ -167,11 +175,11 @@
           Blockchain adoption. I'm fascinated by the intersection of regulation, technology, and
           real-world impact.
         </p>
-<p>
-  I am currently pursuing a <strong>Master of Science in Artificial Intelligence</strong>,
-  further strengthening my technical and analytical foundations alongside my professional career.
-  Languages: <strong>English</strong> &amp; <strong>Maltese</strong>.
-</p>
+        <p>
+          I am currently attending a <strong>Master of Science in Artificial Intelligence</strong>
+          at the University of Malta, further strengthening my technical and analytical foundations
+          alongside my professional career. Languages: <strong>English</strong> &amp; <strong>Maltese</strong>.
+        </p>
 
         <div class="about-interests">
           <h4>Research Interests</h4>
@@ -306,16 +314,15 @@
     <h2 class="section-title">Education</h2>
 
     <div class="edu-grid">
-        <div class="edu-card">
+
+      <div class="edu-card">
         <div>
           <div class="edu-degree">MSc in Artificial Intelligence</div>
           <div class="edu-school">University of Malta</div>
         </div>
-        <div class="edu-year">Oct 2026 — Present</div>
+        <div class="edu-year edu-year--current">Oct 2026 — Present</div>
       </div>
 
-
-      
       <div class="edu-card">
         <div>
           <div class="edu-degree">BSc (Honours) in Business &amp; IT</div>
@@ -323,6 +330,7 @@
         </div>
         <div class="edu-year">Sep 2022 — Jun 2025</div>
       </div>
+
       <div class="edu-card">
         <div>
           <div class="edu-degree">A-Levels &amp; Intermediates</div>
@@ -330,6 +338,7 @@
         </div>
         <div class="edu-year">Oct 2020 — May 2022</div>
       </div>
+
       <div class="edu-card">
         <div>
           <div class="edu-degree">O-Levels</div>
@@ -337,6 +346,7 @@
         </div>
         <div class="edu-year">Sep 2015 — Apr 2020</div>
       </div>
+
     </div>
 
     <div class="dissertation-block">
@@ -413,6 +423,60 @@
 <div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
 
 <!-- ══════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════ -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-label">Work & Build</div>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+      <!-- Dissertation card -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">📄</div>
+          <span class="project-tag">Research</span>
+        </div>
+        <h3 class="project-title">Blockchain Adoption in Malta's Financial Sector</h3>
+        <p class="project-desc">
+          Final year dissertation investigating the key drivers and inhibitors of Blockchain
+          adoption among financial institutions in Malta. Involved qualitative research,
+          stakeholder interviews, and policy analysis.
+        </p>
+        <div class="project-footer">
+          <span class="project-year">2025 · University of Malta</span>
+        </div>
+      </div>
+
+      <!-- Coming soon card -->
+      <div class="project-card project-card--soon">
+        <div class="project-card-header">
+          <div class="project-icon">🚀</div>
+          <span class="project-tag project-tag--soon">Coming Soon</span>
+        </div>
+        <h3 class="project-title">More projects on the way</h3>
+        <p class="project-desc">
+          I am currently working on personal and academic projects related to AI and data.
+          These will be published here as they are completed.
+        </p>
+        <div class="project-footer">
+          <a href="https://github.com/jonathanzammit" target="_blank" rel="noopener" class="project-github-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            github.com/jonathanzammit
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" style="max-width:1000px;margin:0 auto;"></div>
+
+<!-- ══════════════════════════════════════
      CONTACT
 ══════════════════════════════════════ -->
 <section class="section" id="contact">
@@ -420,47 +484,36 @@
     <div class="section-label">Get in Touch</div>
     <h2 class="section-title">Let's connect.</h2>
 
-<div class="contact-wrapper">
-  <div class="contact-text">
-    <p>
-      I'm always open to interesting conversations — whether it's about
-      technology, research, career opportunities, or just a good chat.
-      Feel free to reach out through any of the channels below.
-    </p>
-
-  </div>
-
-  <div class="contact-links">
-    <a href="mailto:jonathanzammit04@gmail.com" class="contact-link">
-      <div class="contact-link-icon">✉️</div>
-      <div class="contact-link-info">
-        <div class="contact-link-label">Email</div>
-        <div class="contact-link-value">jonathanzammit04@gmail.com</div>
+    <div class="contact-wrapper">
+      <div class="contact-text">
+        <p>
+          I'm always open to interesting conversations — whether it's about
+          technology, research, career opportunities, or just a good chat.
+          Feel free to reach out through any of the channels below.
+        </p>
       </div>
-      <span class="contact-link-arrow">↗</span>
-    </a>
 
-    <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/" target="_blank" rel="noopener" class="contact-link">
-      <div class="contact-link-icon">💼</div>
-      <div class="contact-link-info">
-        <div class="contact-link-label">LinkedIn</div>
-        <div class="contact-link-value">jonathan-zammit-a7080b1a9</div>
-      </div>
-      <span class="contact-link-arrow">↗</span>
-    </a>
+      <div class="contact-links">
+        <a href="mailto:jonathanzammit04@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉️</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">jonathanzammit04@gmail.com</div>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
 
-    <a href="https://github.com/jonathanzammit" target="_blank" rel="noopener" class="contact-link">
-      <div class="contact-link-icon">🐙</div>
-      <div class="contact-link-info">
-        <div class="contact-link-label">GitHub</div>
-        <div class="contact-link-value">github.com/jonathanzammit</div>
+        <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">💼</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">jonathan-zammit-a7080b1a9</div>
+          </div>
+          <span class="contact-link-arrow">↗</span>
+        </a>
       </div>
-      <span class="contact-link-arrow">↗</span>
-    </a>
-  </div>
-</div>
-    
     </div>
+
   </div>
 </section>
 
@@ -468,7 +521,7 @@
 <footer>
   <p>© 2026 Jonathan Zammit</p>
   <div class="footer-links">
-    <a href="/cdn-cgi/l/email-protection#066c696867726e67687c676b6b6f72363246616b676f6a2865696b">Email</a>
+    <a href="mailto:jonathanzammit04@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/jonathan-zammit-a7080b1a9/" target="_blank">LinkedIn</a>
   </div>
 </footer>
@@ -481,7 +534,6 @@
   function applyTheme(theme) {
     const isLight = theme === 'light';
     document.documentElement.classList.toggle('light', isLight);
-    // Move the knob: light = left (sun side), dark = right (moon side)
     document.querySelectorAll('.theme-pill').forEach(pill => {
       pill.classList.toggle('is-dark', !isLight);
     });
@@ -493,7 +545,6 @@
     applyTheme(current === 'light' ? 'dark' : 'light');
   }
 
-  // Default: saved preference → system preference → light fallback
   (function () {
     const saved = localStorage.getItem('theme');
     if (saved) {
@@ -505,7 +556,6 @@
     }
   })();
 
-  // Keyboard support for pill
   document.querySelectorAll('.theme-pill').forEach(pill => {
     pill.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleTheme(); }
@@ -535,7 +585,7 @@
   }
 
   // ── SCROLL REVEALS with stagger ───────────────
-  const revealEls = document.querySelectorAll('.tl-item, .edu-card, .skill-group');
+  const revealEls = document.querySelectorAll('.tl-item, .edu-card, .skill-group, .project-card');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -545,8 +595,8 @@
     });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.skills-grid, .timeline, .edu-grid').forEach(group => {
-    const children = group.querySelectorAll('.tl-item, .edu-card, .skill-group');
+  document.querySelectorAll('.skills-grid, .timeline, .edu-grid, .projects-grid').forEach(group => {
+    const children = group.querySelectorAll('.tl-item, .edu-card, .skill-group, .project-card');
     const groupObs = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         children.forEach((child, i) => {
@@ -576,7 +626,3 @@
 
 </body>
 </html>
-
-
-
-
