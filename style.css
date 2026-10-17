@@ -228,7 +228,7 @@ nav.scrolled {
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   padding: 120px clamp(1.5rem, 8vw, 8rem) 80px;
   position: relative; overflow: hidden;
-   text-align: center;
+  text-align: center;
 }
 .hero-bg-glow {
   position: absolute; width: 700px; height: 700px; border-radius: 50%;
@@ -258,17 +258,14 @@ nav.scrolled {
   font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: var(--text);
   opacity: 0; animation: fadeUp 0.7s 0.35s ease forwards;
 }
-.hero h1 .line2 {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--outline-stroke);
-}
 .hero-subtitle {
   margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--muted); max-width: 520px; font-weight: 400;
+  color: var(--muted); max-width: 540px; font-weight: 400;
   opacity: 0; animation: fadeUp 0.7s 0.5s ease forwards;
 }
 .hero-tags {
   display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem;
+  justify-content: center;
   opacity: 0; animation: fadeUp 0.7s 0.65s ease forwards;
 }
 .tag {
@@ -281,8 +278,10 @@ nav.scrolled {
 }
 .hero-actions {
   display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;
+  justify-content: center;
   opacity: 0; animation: fadeUp 0.7s 0.8s ease forwards;
 }
+
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.5rem;
   background: var(--accent); color: #fff;
@@ -305,10 +304,6 @@ nav.scrolled {
   border-color: var(--accent);
   background: rgba(59,130,246,0.05); transform: translateY(-2px);
 }
-
-/* ============================================
-   SECTION SHELL
-   ============================================ */
 
 .section { padding: 100px clamp(1.5rem, 8vw, 8rem); position: relative; }
 .section-inner { max-width: 1000px; margin: 0 auto; }
@@ -581,6 +576,7 @@ footer p { font-size: 0.82rem; color: var(--muted); }
   from { opacity: 0; } to { opacity: 1; }
 }
 
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -612,4 +608,126 @@ footer p { font-size: 0.82rem; color: var(--muted); }
   .nav-right > .theme-pill { display: flex; }
 }
 
+/* ============================================
+   EDUCATION — CURRENT BADGE
+   ============================================ */
 
+.edu-year--current {
+  color: var(--accent);
+  border: 1px solid rgba(59,130,246,0.3);
+  background: rgba(59,130,246,0.08);
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s, border-color 0.3s, box-shadow 0.3s;
+}
+.project-card.visible { opacity: 1; transform: none; }
+.project-card:hover {
+  border-color: rgba(59,130,246,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+/* Dimmed "coming soon" card */
+.project-card--soon {
+  border-style: dashed;
+}
+.project-card--soon:hover {
+  border-style: dashed;
+  border-color: rgba(59,130,246,0.3);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.project-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+}
+
+.project-tag--soon {
+  color: var(--muted);
+  background: var(--surface2);
+  border-color: var(--border);
+}
+
+.project-title {
+  font-family: var(--heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  flex: 1;
+}
+:root.light .project-desc { color: #4b5563; }
+
+.project-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-year {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.project-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.project-github-link:hover { color: var(--text); }
